@@ -1,0 +1,103 @@
+/* Устанавливаем стиль для вычисления общей ширины и высоты элементов, а также подключаем шрифт из библиотеки Google (рефералка на него в html) */
+/* * - универсальный селектор, соответствует любому тегу. */
+* {
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Убираем дефолтные внешние отступы у элемента "body", чтобы фоновое изображение развернулось на весь экран */
+html, body {
+  margin: 0;
+}
+
+/* Устанавливаем стиль для фона. */
+/* vh - эквивалент 1% высоты окна браузера, vw - эквивалент 1% ширины окна браузера. */
+.full-screen-container {
+  background-image: url("backgroundImage.jpg");
+  height: 100vh; 
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Устанавливаем стиль для окна идентификации пользователя. */
+/* hsla - hue, saturation, lightness components and (optional) color's transparency. */
+/* При помощи hsla можно выставить оттенок, насыщенность, яркость и цветовую прозрачность элемента. Является альтернативой rgb. */
+.login-container {
+  background-color: hsla(201, 100%, 6%, 0.6);
+  padding: 50px 30px;
+  min-width: 400px;
+  width: 50%;
+  max-width: 600px;
+}
+
+/* Устанавливаем стиль для заголовка окна идентификации пользователя. */
+/* em - относительная единица размера, определяется контекстом. 1em - текущий размер шрифта, от которого можно брать любые пропорции. */
+.login-title {
+  color: white;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  font-weight: normal;
+}
+
+/* Устанавливаем стиль для полей ввода данных. */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* Устанавливаем стиль для заголовков полей ввода (Email, Password). */
+.input-group label {
+  color: white;
+  font-weight: lighter;
+  font-size: 1.5em;
+  margin-bottom: 7px;
+}
+
+/* Устанавливаем стиль для вводимого пользователем текста. */
+.input-group input {
+  font-size: 1.5em;
+  padding: .1em .25em;
+  background-color: hsla(201, 100%, 91%, 0.3);
+  border: 1px solid hsl(201, 100%, 6%);
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: lighter;
+}
+
+/* Устанавливаем стиль для полей ввода, когда они в фокусе (пользователь навел курсор на поле ввода и нажал). */
+.input-group input:focus {
+  border: 1px solid hsl(201, 100%, 50%)
+}
+
+/* Устанавливаем стиль для кнопки "LogIn" */
+.login-button {
+  padding: 10px 30px;
+  width: 100%;
+  border-radius: 5px; 
+  background-color: hsla(201, 100%, 50%, 0.1);
+  border: 1px solid hsl(201, 100%, 50%);
+  outline: none;
+  font-size: 1.5em;
+  color: white;
+  font-weight: lighter;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* Устанавливаем стиль для кнопки "LogIn", когда курсор наведен на нее. */
+.login-button:hover {
+  background-color: hsla(201, 100%, 50%, 0.3)
+}
+
+/* Устанавливаем стиль для кнопки "LogIn", когда она в фокусе (происходит нажатие на нее). */
+.login-button:focus {
+  background-color: hsla(201, 100%, 50%, 0.5)
+}
