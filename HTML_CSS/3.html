@@ -1,0 +1,59 @@
+<!-- ЗАДАНИЕ 3. -->
+<!-- Напишите стили для кнопки, которая может иметь несколько состояний: active, disabled, danger. Цвета произвольные. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    button.active:enabled {
+      min-width: 100px;
+      background-color: #29e949;
+      cursor: pointer;
+      padding: 6px 14px;
+      font-size: 14px;
+    }
+
+    button.disabled:disabled {
+      min-width: 100px;
+      background-color: #dddddd;
+      cursor: not-allowed;
+      padding: 6px 14px;
+      font-size: 14px;
+    }
+
+    button.danger:enabled {
+      min-width: 100px;
+      background-color: #e03e16;
+      cursor: pointer;
+      padding: 6px 14px;
+      font-size: 14px;
+    }
+
+    button:hover:enabled {
+      /* border: 2px solid #09151a; */
+      background-color: #00aacc;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 6px 14px;
+      font-size: 14px;
+    }
+
+    button:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px #cbd6ee;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form centered>
+    <button type="submit" class="active" enabled>ACTIVE</button><br><br>
+    <button type="submit" class="disabled" disabled>DISABLED</button><br><br>
+    <button type="submit" class="danger" enabled>DANGER</button>
+  </form>
+
+</body>
+
+</html>
